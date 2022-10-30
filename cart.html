@@ -82,14 +82,17 @@
       <div class="row g-3">
         <div class="col-md-6">
           <input type="text" id="inputCalle" class="form-control" placeholder="Calle">
+          <p id="mensaje-calle"></p>
         </div>
 
         <div class="col-md-6">
           <input type="text" id="inputNumero" class="form-control" placeholder="Número">
+          <p id="mensaje-numero"></p>
         </div>
 
         <div class="col-md-6">
           <input type="text" id="inputEsquina" class="form-control" placeholder="Esquina">
+          <p id="mensaje-esquina"></p>
         </div>
       </div>
 <!-- Suma de precios -->
@@ -143,10 +146,64 @@
       </div>
     </div>
       </div>
-
-
     </div>
+
+<!-- Modal -->
+    <button type="button" class="btn btn-primary mt-5" style="height: 40px; width: 200px" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">
+    Metodo de pago
+  </button>
+  <p id="invalidmetododepago"></p>
+  <div class="modal fade" id="exampleModal" tabindex="-1"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <h2 class="font-weight-bold fs-4" id="exampleModalLabel">Forma de pago</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-labellebdy="myModalLabel" aria-label="Close"></button>
+        </div>
+      
+        <div class="modal-body">
+          <label for="tarjetaCredito"><input type="radio" name="radiomod" id="tarjetaCredito" class="form-check-input"
+          oninput="bloquearTransferencia()">Tarjeta de Crédito</label>
+        
+        
+          <hr>
+        <label for="nroTarjeta"> Número de tarjeta <input type="text" id="nroTarjeta" class="form-control"required>
+        </label>
+
+          <label for="codigoSeguridad">Código de Seg. <input type="text" id="codigoSeguridad"
+            class="form-control"required>
+          </label>
+
+          <label for="vencimiento">Vencimiento <input type="date" id="vencimiento" class="form-control"
+              required>
+          </label>
+
+          <hr>
+          <label for="transBancaria"><input type="radio" name="radiomod" id="transBancaria"
+              class="form-check-input" oninput="bloquearTarjeta()"> Transferencia Bancaria
+          </label>
+
+          <hr>
+          <label for="nroCuenta">Número de cuenta <input type="text" id="nroCuenta" class="form-control"
+              required>
+          </label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="successalert"></div> 
+<button type="submit" class="btn btn-success mt-5" id="btnsubmit">Finalizar compra</button>
   </main>
+
+
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
