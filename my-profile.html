@@ -52,8 +52,32 @@
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      
+      <div class="row my-4">
+        
+        <h2 class="my-3 mb-5">Perfil</h2>
+        <hr>
+        <div class="col">
+          <label class="my-2" for="primerNombre">Primer nombre*</label>
+          <input type="text" class="form-control col-6" id="primerNombreInp" required>
+          <label class="my-2" for="primerApellido">Primer apellido*</label>
+          <input type="text" class="form-control col-6" id="primerApellidoInp" required>
+          <label class="my-2" for="email">Email</label>
+          <input type="text" class="form-control col-6" id="emailInp" required>
+        </div>
+
+        <div class="col">
+          <label class="my-2" for="segundoNombre">Segundo nombre</label>
+          <input type="text" class="form-control col-6" id="segundoNombreInp">
+          <label class="my-2" for="segundoApellido">Segundo apellido</label>
+          <input type="text" class="form-control col-6" id="segundoApellidoInp">
+          <label class="my-2" for="telContacto">Teléfono de contacto</label>
+          <input type="text" class="form-control col-6" id="telContactoInp">
+        </div>
+      </div>
+      <hr>
+            <button class="button"  type="submit" id="boton-sbm">Guardar</button>
+
       </div>
     </div>
   </main>

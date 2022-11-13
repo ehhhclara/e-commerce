@@ -20,6 +20,7 @@ for ( i = 0; i < product.length; i++) {
     <td class="col-2" id="precioTotal">${product[i].unitCost}</td>`
 
 
+  
     if (envioP.checked){
       precioEnvio.innerHTML = `USD ${(product[i].unitCost * 0.15)}`;
     subtotalFinal.innerHTML=`USD ${(product[i].unitCost)}`
@@ -68,13 +69,9 @@ for ( i = 0; i < product.length; i++) {
       document.getElementById("nroCuenta").disabled = false;
      }
 
-
-
-
-
-
      //validar formulario
 document.getElementById("btnsubmit").addEventListener("click", function validaciones (event) {
+  
       // form direccion
       
       let calle = document.getElementById("inputCalle")
